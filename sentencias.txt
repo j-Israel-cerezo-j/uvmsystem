@@ -1,0 +1,63 @@
+create table materia(
+idmateria int not null auto_increment PRIMARY KEY,
+ Nombremateria varchar(50))
+
+create table Programa(idprograma int not null auto_increment PRIMARY KEY,
+ Nombreprograma VARCHAR(60), 
+ idmateria int not null, 
+FOREIGN KEY(idmateria) REFERENCES materia(idmateria));
+
+create table alumno(idalumno int not null auto_increment primary key, 
+nombre varchar(50),cuenta int, correo varchar(100), 
+idprograma INT NOT NULL,
+foreign key(idprograma) references Programa(idprograma));
+
+create table cursado(idcursado int not null auto_increment primary key, 
+asigcur varchar(5),
+idmateria int not null ,
+foreign key(idmateria)references materia(idmateria),
+idalumno int null ,
+foreign key(idalumno)references alumno(idalumno))
+
+++++++++CONSULTAS+++++++
+SELECT nombre,cuenta,correo, Nombreprograma, Nombremateria FROM alumno INNER JOIN programa ON alumno.idprograma=programa.idprograma INNER JOIN materia ON programa.idmateria=materia.idmateria 
+SELECT programa.idprograma, programa.Nombreprograma from programa inner JOIN alumno on programa.idprograma=alumno.idprograma where idalumno=112
+SELECT materia.Nombremateria from materia INNER JOIN programa on materia.idprograma=materia.idprograma WHERE materia.idprograma=19
+
+
+ <?php
+                           if(isset($_GET['var']))
+                           {
+                            $id=$_GET['var'];
+                            $consulta="SELECT programa.idprograma, from programa inner JOIN alumno on programa.idprograma=alumno.idprograma where idalumno=$id";
+                            $result = mysqli_query($conexion, $consulta);
+                            $result=$IDM;
+                            $consulta2="SELECT materia.Nombremateria from materia INNER JOIN programa on materia.idprograma=materia.idprograma WHERE materia.idprograma=$IDM";
+                            $res=mysqli_query($conexion,$consulta2);
+                            while($ver=mysqli_fetch_row($result))
+                                {
+                                   echo $ver[0];
+                                }
+                              }
+                              else
+                              echo ('no jala');
+
+                             ?>
+
+
+mostar materias cursadas
+<?php  
+                       if(isset($_GET['var']))
+                                 {
+                                 $id=$_GET['var'];
+                                 $consulta= mysqli_query($conexion,"select nombremateria from cursado where cursado.idalumno=$id");
+                                 foreach($consulta as $res){
+                                   echo'<br>'. $res['nombremateria'];
+
+                                 }
+                                 }
+                        ?>
+
+                        <script type="text/javascript" src="js/tablefilter.js"></script>
+
+                        <link rel="stylesheet" type="text/css" href="js/filtergrid.css" media="screen" >

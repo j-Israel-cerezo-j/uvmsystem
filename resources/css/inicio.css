@@ -1,0 +1,145 @@
+#principal{
+ 
+    width: 90%;
+    max-width: 1300px;
+    height: auto;
+    background-color: transparent;
+    margin: 3px solid black;
+    line-height: 50px;
+   
+    /*divisiones*/
+    display:  grid;
+    grid-template-columns:  minmax(120px, 200px)auto;
+    grid-template-rows: minmax(auto, auto) 400px 400px ;
+    /*grid-gap: 20px;*/
+
+}
+#principal > div{
+
+    padding: 20px;
+    box-shadow: 2px 2px 10px   rgba(0,0, 0, .25);
+}
+
+#principal > #item1
+{
+    /*grid-column-start:1 ;
+    grid-column-end:2;*/  
+    grid-row-start: 1;
+    grid-row-end: 6;
+    background-color: #F9925C !important ;
+    margin-right: auto; 
+}
+
+#uni
+{
+    color: white;
+    font-size: 26px;
+}
+
+#principal > #item2
+{
+    grid-row-start:1;
+    grid-row-end: 2;
+    background-color: #F9925C ;
+}
+
+#principal > #item3
+{
+    grid-row-start:2;
+    grid-row-end: 6;
+    background-color: white !important;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.btnsal
+{
+    float: right;
+    height: auto;
+    width: auto;        
+}
+table {
+    border-collapse: collapse;
+  }
+
+#chat
+{
+    width: 100%;
+    max-width: 500px;
+    height: 400px;
+    background-color: #ffcd90;
+    box-shadow: 2px 2px 15px black;
+    line-height: 30px;
+    text-align: center;
+    margin: auto;
+    display: grid;
+    grid-template-columns: minmax(200px, 400px )100px;
+    grid-template-rows: 330px;
+    grid-gap: 10px;
+}
+
+.vertical-menu {
+    width: 130px; /* Set a width if you like */
+  }
+  
+.vertical-menu a {
+    background-color: #F9925C; /* orange background color */
+    color: black; /* Black text color */
+    display: block; /* Make the links appear below each other */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove underline from links */
+}
+  
+.vertical-menu a:hover {
+    background-color: #ccc; /* Dark grey background on mouse-over */
+}
+  
+.vertical-menu a.active {
+    background-color: white; /* Add a green color to the "active/current" link */
+    color: black;
+}
+
+#img{
+    box-shadow: 2px 2px 10px black;
+}
+
+#chat > #base
+{
+    background-color: #F9925C;
+    overflow:auto;
+}
+
+#chat > #usuarios
+{
+    background-color: #F9925C;
+    border-radius: 10px;
+}
+
+#chat > #barra
+{
+    grid-row-start: auto;
+    grid-row-end: auto;
+    background-color:  transparent;
+}
+
+
+#btnenviar
+{
+    height: 50px;
+    margin-right: 5px;
+    border-radius: 10px 100px;
+    box-shadow: 2px 2px 10px  black;
+}
+
+ #txtenviar
+ {
+     width: 100%;
+     max-width: 360px;
+     height:  30px;
+     margin: auto;
+     padding: 5px;
+     margin-top: 4px;
+     display: block;
+     border-radius: 30px;
+     box-shadow: 2px 2px 15px black;
+}
+

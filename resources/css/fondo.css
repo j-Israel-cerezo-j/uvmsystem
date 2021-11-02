@@ -1,0 +1,7 @@
+body {
+     background-image: url('../IMAGENES/uvm.jpg'); 
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background: cover;
+    padding: 50spx;
+}

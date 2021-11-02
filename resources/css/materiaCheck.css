@@ -1,0 +1,140 @@
+
+
+.base{
+    width: 900%;
+    height: 1300px;
+
+}
+#principal{
+    width: 90%;
+    max-width: 1300px;
+    height: auto;
+    float:center;
+    background-color: #C1BCBA ;
+    margin: 3px solid rgb(2, 2, 2);
+    line-height: 50px;
+     margin-top: 1%;
+     margin-top: 19px;
+     color: black;
+     /*divisiones*/
+    /*display:  grid;
+    grid-template-columns:  minmax(120px, 200px)auto;
+    grid-template-rows: minmax(auto, auto) 400px 400px ;
+    grid-gap: 20px;*/
+}
+#contenido{
+    height: 700px;
+    margin: auto;
+    border: 1px solid #f19b61; 
+    margin-top: 1%;
+    margin-top: 19px;
+    overflow: auto;
+}
+/*#form{
+    margin-top: 12%;
+    width: 60px;
+    height: 50px;
+    display: block;
+    margin-top: 1%;
+}*/
+.secciones
+{
+  width: 300px;
+  height: 200px;
+  margin-left: 20px;
+  margin-top: 10px;
+  float: left;
+  color: #272726;
+  overflow: auto;
+}
+#menu-mat{
+    width: 90%;
+    height: 90px;
+    margin-top: 1%;
+    float: left;
+    background-color: #fdaf7b;
+}
+.radio
+{
+   display: none;
+}
+label{
+    display: inline-block; /* lo pone en lineas pero lo deja 4 bloques*/
+    margin-left: 70px;
+    padding: 9px 9px;/* son los margenes*/
+    font-weight: 100; /* es el grosor de la letra*/
+    text-align: center;
+    color: #0f0f0d;
+    margin-top: 2%;
+}
+input:checked + label
+{
+    color: black;
+    background-color: #fcc36d;
+    margin-top: 0%;
+    overflow: auto;
+}
+#section{
+    display: none;
+}
+#radio1:checked ~ #Fisioterapia,
+#radio2:checked ~ #Mercadoctenia,
+#radio3:checked ~ #Finanzas,
+#radio4:checked ~ #GestionCalidad
+{
+    display: block;
+}
+
+table{
+    width: 100%;
+    border: 1px solid #f19b61;
+    border-collapse: collapse;
+}
+
+th, td{
+    width: 25;
+    text-align: left;
+    vertical-align: top;
+    border: 1px solid #f19b61;
+    border-spacing: 0;
+} 
+#info{
+    width: 100%;
+    height: 100%;
+}
+#mat{
+    width: 440px;
+    height: 720px;
+    margin-top: auto;
+    border: 1px solid #f19b61;
+    color: black;
+    background-color: #fccdae;
+    display:flex;
+    position: relative;
+    float: left;
+    margin-left: 13px;
+    margin-right: 13px;
+    top: 3px; 
+    margin: 0px;
+    text-align: center;
+    
+}
+ #materias{
+    z-index: 1;
+    width: 400px;
+    height: 600px;
+    margin-top: 1%;
+    border: 1px solid #32CD32;
+    color: #0f0f0d;
+    background-color: #98FB98;
+    display:flex;
+   position: relative;
+   float: right;
+   margin-left: 100px;
+   margin-right: 100px;
+   top: 5px; margin: 5px;
+}
+#info > #mat{
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,274 @@
+body{
+    background: white;
+    font-family: monospace;
+}
+
+/* /CSS Header/ */
+
+#bodyLista{
+    margin: 0;
+}
+
+#contador{
+    background: #1faac8;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+
+}
+
+nav{
+    z-index: 1;
+}
+
+header{
+    width: 100%;
+    background: linear-gradient(to bottom, rgb(219, 68, 81), rgb(180, 42, 42) 100%);
+}
+
+#btn-menu{
+    display: none;
+}
+
+header label{
+    display: block;
+    width: 42px;
+    height:  50px;
+    padding: 5px;
+    border-right: 1px solid rgb(155, 140, 140);
+    border-bottom: 3px solid #333;
+}
+
+header label:hover{
+    cursor:pointer;
+    background: rgba(36, 35, 35, 0.2);
+}
+
+
+.menu ul{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    /* /justify-content: flex-end;/ */
+}
+
+.menu li{
+    flex-grow: 1;
+    text-align: center;
+    border-right: 1px solid #FFF;
+    border-bottom: 3px solid #333;
+}
+
+.menu li a{
+    display: block;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.menu li:hover{
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* /CSS InicioSesion/ */
+
+.fondoInicio{
+    background: radial-gradient(900px, red,#434346);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    min-height: 97.6vh;
+}
+
+
+#uvmlogo{
+    width: 224px; 
+    height: 177px;
+    margin: auto;
+    display: block;
+    padding-top: 0px;
+    padding-bottom: 10px;
+}
+
+.form__edit{
+    width: 280px;
+    height: 320px;
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 10px 15px rgba(0,0,0,0.2);
+    display: block;
+    flex-direction: column;
+    padding: 20px 40px;
+    align-items: center;
+    margin: auto;
+    border-radius: 5px;
+
+    /*margin: auto;
+    width: 50%;
+    max-width: 500px;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 20px 40px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;*/
+}
+
+
+.form__edit h2{
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 25px;
+    color: rgba(248, 248, 248, 0.849);
+}
+
+.inpt_edit{
+    min-width: 280px;
+    min-height: 30px;
+    padding: 5px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #6a9983;
+    font-size: 15px;
+    margin: 20px 0;
+    /*display: block;
+    padding: 10px;
+    width: 100%;  
+    border-radius: 20px;*/
+}
+
+.inpt_boton{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 15%;
+    min-height: 30px;
+    min-width: 200px;
+    max-width: 100px;
+}
+
+input[type="text"]::placeholder{
+    color: white;
+}
+
+input[type="text"]{
+    color: white;
+}
+
+input[type="password"]::placeholder{
+    color: white;
+}
+
+.inpt_boton{
+    background: linear-gradient(#ff4f58e8, #fd2a35ee);
+    border: none;
+    color: white;
+    opacity:  0.9;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-bottom: 0;
+}
+
+.inpt_boton:hover{
+    opacity: 0.7;
+}
+
+
+/* /CSS buscador/ */
+
+.form_search{
+    display: -webkit-flex;
+    display: -moz-box;
+    display: flex;
+    float: right;
+    background: initial;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.form_search .btn_search{
+    background: #1faac8;
+    color: #FFF;
+    padding: 0 30px;
+    border: 10;
+    border-color: black;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.btn_search:hover{
+    background: lightslategray;
+}
+
+
+/* CSS Lista1 */
+
+.container-table{
+    width: 90%;
+    background: white;
+    margin: 50px auto;
+    box-shadow: 0 0 20px #333;
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: 50px;
+
+    position: relative;
+}
+
+.table__title{
+    grid-column-start: 1;
+    grid-column-end: 5;
+
+    background: rgb(219, 68, 81);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.9em;
+}
+
+.table_header, .table_item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.itleft{
+    justify-content: left;
+    align-items: left;
+}
+
+.table__header{
+    font-weight: bold;
+    font-size: 1.6em;
+}
+
+.table__item{
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+.title__edit{
+    position: absolute;
+    right: 7%;
+    color:  white;
+    text-decoration: none;
+    font-size: 0.7em;
+}
+
+.title__edit:hover {
+    text-decoration: wavy;
+    color: yellowgreen;
+}
+
+#name__edit{
+    right: 7%;
+    color:  rgba(133, 14, 133, 0.808);
+    text-decoration: none;
+}
+
+#name__edit:hover{
+    text-decoration: underline;
+}
+
